@@ -13,6 +13,7 @@ router.put("/", secure('edit') ,upsert);
 async function list(req, res) {
   try {
     const list = await Controller.list();
+    console.log(list)
     response.success(req, res, list, 200);
   } catch (error) {
     response.error(req, res, error.message, 500);
