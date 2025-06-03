@@ -9,7 +9,7 @@ router.get('/', list)
 router.get('/:id', get)
 router.post('/', upsert)
 router.put("/", secure('edit') ,upsert);
-
+console.log('User router loaded');
 async function list(req, res) {
   try {
     const list = await Controller.list();
