@@ -17,6 +17,7 @@ app.use('/api/user', user);
 app.use('/api/auth', auth);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 console.log('API routes loaded');
+console.log('Swagger docs loaded');
 app.use(errors);
 
 app.listen(config.api.port, () => {
